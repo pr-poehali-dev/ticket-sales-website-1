@@ -65,7 +65,7 @@ const Index = () => {
       title: 'Stand-up шоу',
       date: '1 ноября 2025',
       venue: 'Клуб "Смех"',
-      price: { standard: 1200, vip: 1800, premium: 2500 },
+      price: 1500,
       category: 'Развлечения',
       image: 'https://avatars.mds.yandex.net/i?id=b3d3a3019892fbf4dcdb75af11883ed95394ce91-5341407-images-thumbs&n=13'
     },
@@ -346,28 +346,6 @@ const Index = () => {
           </DialogHeader>
 
           <div className="space-y-6">
-            {selectedEvent && typeof selectedEvent.price === 'object' && (
-              <div className="grid grid-cols-3 gap-3">
-                <Card className="bg-muted/50">
-                  <CardHeader className="p-4">
-                    <CardTitle className="text-sm">Стандарт</CardTitle>
-                    <p className="text-xl font-bold text-primary">{selectedEvent.price.standard} ₽</p>
-                  </CardHeader>
-                </Card>
-                <Card className="bg-muted/50">
-                  <CardHeader className="p-4">
-                    <CardTitle className="text-sm">VIP</CardTitle>
-                    <p className="text-xl font-bold text-primary">{selectedEvent.price.vip} ₽</p>
-                  </CardHeader>
-                </Card>
-                <Card className="bg-muted/50">
-                  <CardHeader className="p-4">
-                    <CardTitle className="text-sm">Премиум</CardTitle>
-                    <p className="text-xl font-bold text-primary">{selectedEvent.price.premium} ₽</p>
-                  </CardHeader>
-                </Card>
-              </div>
-            )}
             <div className="bg-muted p-4 rounded-lg text-center">
               <div className="inline-flex items-center gap-2 text-sm font-medium">
                 <Icon name="Monitor" className="h-5 w-5" />
