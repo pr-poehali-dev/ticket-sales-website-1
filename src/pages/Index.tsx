@@ -67,7 +67,7 @@ const Index = () => {
       venue: 'Клуб "Смех"',
       price: 1500,
       category: 'Развлечения',
-      image: 'https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=800'
+      image: 'https://avatars.mds.yandex.net/i?id=b3d3a3019892fbf4dcdb75af11883ed95394ce91-5341407-images-thumbs&n=13'
     },
     {
       id: 5,
