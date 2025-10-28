@@ -29,7 +29,7 @@ interface Seat {
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
-  const [seats, setSeats] = useState<Seat[]>(generateSeats())
+  const [seats, setSeats] = useState<Seat[]>([])
   const [selectedSeats, setSelectedSeats] = useState<string[]>([])
 
   const events: Event[] = [
@@ -95,17 +95,23 @@ const Index = () => {
     event.venue.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-  function generateSeats(): Seat[] {
+  function generateSeats(eventId?: number): Seat[] {
     const seats: Seat[] = []
     for (let row = 1; row <= 10; row++) {
       for (let num = 1; num <= 12; num++) {
         const randomStatus = Math.random() > 0.7 ? 'sold' : 'available'
+        let price = row <= 3 ? 3500 : row <= 7 ? 2500 : 1500
+        
+        if (eventId === 4) {
+          price = row <= 3 ? 5000 : row <= 7 ? 2500 : 1500
+        }
+        
         seats.push({
           id: `${row}-${num}`,
           row,
           number: num,
           status: randomStatus,
-          price: row <= 3 ? 3500 : row <= 7 ? 2500 : 1500
+          price
         })
       }
     }
@@ -123,6 +129,12 @@ const Index = () => {
       setSelectedSeats([...selectedSeats, seatId])
       setSeats(seats.map(s => s.id === seatId ? { ...s, status: 'selected' } : s))
     }
+  }
+
+  function handleEventSelect(event: Event) {
+    setSelectedEvent(event)
+    setSeats(generateSeats(event.id))
+    setSelectedSeats([])
   }
 
   function getTotalPrice() {
@@ -249,7 +261,7 @@ const Index = () => {
                     от {typeof event.price === 'number' ? event.price : event.price.standard} ₽
                   </span>
                   <Button 
-                    onClick={() => setSelectedEvent(event)}
+                    onClick={() => handleEventSelect(event)}
                     className="bg-primary hover:bg-primary/90"
                   >
                     Выбрать места
