@@ -76,7 +76,7 @@ const Index = () => {
       venue: 'Галерея искусств',
       price: 800,
       category: 'Искусство',
-      image: 'https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=800'
+      image: 'https://avatars.mds.yandex.net/i?id=f853db4ed042b3f94cb79a982c7c9b81ef54986b-5248760-images-thumbs&n=13'
     },
     {
       id: 6,
