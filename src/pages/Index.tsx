@@ -58,7 +58,7 @@ const Index = () => {
       venue: 'Спортивная арена',
       price: 3200,
       category: 'Спорт',
-      image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800'
+      image: 'https://avatars.mds.yandex.net/i?id=6d6e9ffcfbb369f8e7a554fc3f6dd6fff92851d6-5276792-images-thumbs&n=13'
     },
     {
       id: 4,
