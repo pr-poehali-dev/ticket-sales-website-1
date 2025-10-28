@@ -49,7 +49,7 @@ const Index = () => {
       venue: 'Драматический театр',
       price: 1800,
       category: 'Театр',
-      image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?w=800'
+      image: 'https://avatars.mds.yandex.net/i?id=c31a78fcbb33835ac3bf55515beb7105a801d4b7-5489936-images-thumbs&n=13'
     },
     {
       id: 3,
