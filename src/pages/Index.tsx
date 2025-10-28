@@ -40,7 +40,7 @@ const Index = () => {
       venue: 'Концертный зал',
       price: 2500,
       category: 'Музыка',
-      image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800'
+      image: 'https://s1.afisha.ru/mediastorage/53/d7/8c07ff7366644248b6d9ddaad753.jpg'
     },
     {
       id: 2,
