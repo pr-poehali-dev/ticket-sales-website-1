@@ -161,15 +161,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold font-heading text-secondary">БилетПро</h1>
-            <nav className="hidden md:flex gap-6">
+            <nav className="flex gap-6">
               <a href="#events" className="text-foreground hover:text-primary transition-colors">Афиша</a>
               <a href="#search" className="text-foreground hover:text-primary transition-colors">Поиск</a>
               <a href="#faq" className="text-foreground hover:text-primary transition-colors">Помощь</a>
             </nav>
-            <Button variant="outline">
-              <Icon name="User" className="mr-2 h-4 w-4" />
-              Войти
-            </Button>
           </div>
         </div>
       </header>
