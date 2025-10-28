@@ -85,7 +85,7 @@ const Index = () => {
       venue: 'Открытая площадка',
       price: 4500,
       category: 'Музыка',
-      image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800'
+      image: 'https://avatars.mds.yandex.net/i?id=8ba9579779f1be3a8839d354d6ec928beb5346d9-16316409-images-thumbs&n=13'
     }
   ]
 
