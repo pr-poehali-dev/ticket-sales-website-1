@@ -187,10 +187,19 @@ const Index = () => {
                   placeholder="Поиск мероприятий..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  }}
                   className="pl-10 bg-white"
                 />
               </div>
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90"
+                onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Найти
               </Button>
             </div>
